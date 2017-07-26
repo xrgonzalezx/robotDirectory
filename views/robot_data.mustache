@@ -4,15 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>Robot Members</title>
-
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
   <h4>Index</h4>
   <!-- //this is the loop -->
-  <div class="main">
-    {{ #robotdata }}
+{{ #robotdata }}
+<div class="main"
+  <div class="wrapper">
+
     <a href="http://localhost:3000/individual_Robot/{{name}}">
       <img class="Avatars" src="{{avatar}}" alt="{{name}}"></a>
     <h1 class="robotName">{{name}}</h1>
@@ -23,8 +25,10 @@
         <p class="available">Available for hire</p>
         {{ /job }}
     <p>{{company}}</p>
-    {{ /robotdata }}
+
   </div>
+</div>
+{{ /robotdata }}
 </body>
 
 

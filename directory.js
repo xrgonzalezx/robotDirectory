@@ -8,6 +8,8 @@ app.engine('mustache', mustacheExpress());
 app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
 
+app.use(express.static('public'));
+
 app.get('/individual_Robot', function(request, response){
   response.render('individual_Robot', { robotdata: robotMembers.users });
 });

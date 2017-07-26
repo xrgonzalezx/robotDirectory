@@ -1,0 +1,18 @@
+ .main{
+  display: inline-block;
+  border-style: solid;
+  border-width: thin;
+  align-items: center;
+  width: 15rem;
+  height: auto;
+  margin-left: 35px;
+}
+
+/*.main{
+
+}*/
+
+.robotName{
+  color: blue;
+  text-decoration: underline;
+}

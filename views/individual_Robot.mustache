@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Staff</title>
-
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
-<body>
+<body class="container">
   <h1>Second page</h1>
 
   <div class="alldata">
     {{ #robotdata }}
-    <p>{{address.city}}, {{address.country}}</p>
+    <p>{{city}}, {{country}}</p>
     <p> {{#job}}
           {{ job }}
           {{ /job }}

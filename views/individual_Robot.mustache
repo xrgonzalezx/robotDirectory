@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Staff</title>
+
+</head>
+
+<body>
+  <h1>Second page</h1>
+
+  <div class="alldata">
+    {{ #robotdata }}
+    <p>{{address.city}}, {{address.country}}</p>
+    <p> {{#job}}
+          {{ job }}
+          {{ /job }}
+          {{ ^job }}
+          <p class="available">Available for hire</p>
+          {{/job}}</p>
+      <p class="robotCompany">{{company}}</p>
+      <p class="robotEmail">{{email}}</p>
+      <p class="robotPhone">{{phone}}</p>
+    {{ /robotdata }}
+  </div>
+
+</body>
+
+</html>

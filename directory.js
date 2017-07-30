@@ -10,20 +10,19 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static('public'));
 
+app.get('/', function(request, response){
+  response.render('robot_data', { robotdata: robotMembers.users });
+});
+
 app.get('/individual_Robot', function(request, response){
   response.render('individual_Robot', { robotdata: robotMembers.users });
 });
 
-app.get('/robot_data', function(request, response){
-  response.render('robot_data', { robotdata: robotMembers.users });
-});
-
-
-app.get('/robot_data/:name', function(request, response){
-  let person = robotMembers.find(function(member) {
-    return member.name.toLowerCase() === request.params.name;
-  })
-  response.render('robot_data', person);
+app.get('/:username', function(request, response){
+  let person = robotMembers.users.find(function(member) {
+    return member.username.toLowerCase() === request.params.username;
+  });
+  response.render('individual_Robot', { robotdata: person });
 });
 
 
